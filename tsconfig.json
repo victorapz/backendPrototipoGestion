@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "outDir": "./dist",
+    "rootDir": "./",
+    "baseUrl": "./src",
+    "noImplicitReturns": true,
+    "types": ["node", "express"],
+    "paths": {
+      "@/*": ["*"]
+    },
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "module": "ESNext",
+    "target": "ESNext"
+  },
+  "include": ["src/**/*.ts", "src/lib/prisma.js", "src/types/**/*.d.ts", "src/index.js"],
+  "exclude": ["node_modules"],
+  "allowJs": true,
+  "checkJs": false
+}
