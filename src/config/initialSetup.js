@@ -196,7 +196,7 @@ async function createOrdenCompra() {
     }
 }
 
-const base64Content = fs.readFileSync('../backend/uploads/ActaDeConstitución.pdf').toString('base64');
+const base64Content = fs.readFileSync('uploads/ActaDeConstitución.pdf').toString('base64');
 
 async function createFichaTecnica() {
     try {
