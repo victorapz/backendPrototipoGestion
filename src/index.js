@@ -11,10 +11,10 @@ import licitacionRoutes from './routes/licitacion.routes.js';
 // import FichaTecnicaRoutes from './routes/fichatecnica.routes.js';
 // import licitacionfichatecnicaRoutes from './routes/licitacionfichatecnica.routes.js';
 
-
+dotenv.config();
 await sequelize.sync({ force: true }); // Solo en desarrollo 
 
-dotenv.config();
+
 
 // Configuración inicial
 const app = express();
