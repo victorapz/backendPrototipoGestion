@@ -8,7 +8,6 @@ console.log('DB_NAME:', process.env.DB_NAME);
 console.log('DB_PASSWORD:', process.env.DB_PASSWORD);
 console.log('Type of DB_PASSWORD:', typeof process.env.DB_PASSWORD);
 
-
 const sequelize = new Sequelize(
     process.env.DB_NAME,
     process.env.DB_USER,
@@ -16,7 +15,13 @@ const sequelize = new Sequelize(
     host: process.env.DB_HOST,
     port: process.env.DB_PORT,
     dialect: 'postgres',
-    logging: console.log 
+    logging: console.log,
+    dialectOptions: {
+        ssl: {
+        require: true,
+        rejectUnauthorized: false
+        }
+    }
 });
 
 export default sequelize; 
